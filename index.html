@@ -2,10 +2,7 @@
 <html lang="en">
     <head>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-        <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
->
+        <link rel="stylesheet" href="src/css/pico.jade.min.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="src/css/styles.css">
         <title>MayorTom4815</title>
@@ -27,9 +24,8 @@
                             <summary role="button"><i class="bi bi-list"></i> Index</summary>
                             <ul>
                                 <li><a href="#About"><i class="bi bi-file-person-fill"></i> About Me</a></li>
-                                <li>
-                                    <a href="#Projects"><i class="bi bi-suitcase-lg-fill"></i> Projects</a>
-                                </li>
+                                <li><a href="#Projects"><i class="bi bi-suitcase-lg-fill"></i> Projects</a></li>
+                                <li><a href="#Contact"><i class="bi bi-envelope-at-fill"></i> Contacts</a></li>
                             </ul>
                         </details>
                     </li>
@@ -66,9 +62,11 @@
                     <div class="grid">
                         <img src="https://img.itch.zone/aW1nLzE0NzYxMTI1LnBuZw==/original/O8D0v8.png" alt="">
                         <div class="container">
-                            <H4>Descropion:</H4>
-                            <p>A remake of Hotline Miami for Godot because I hate GameMaker.</p>
-                            <iframe width="552" height="167" frameborder="0" src="https://itch.io/embed/2456312"><a href="https://majortom4815.itch.io/hm-bloodparty">Hotline Miami : Blood Party by MajorTom4815</a></iframe>
+                            <div class="cont">
+                                <H4>Descropion:</H4>
+                                <p>A remake of Hotline Miami for Godot because I hate GameMaker.</p>
+                            </div>
+                            <a href="https://majortom4815.itch.io/hm-bloodparty" role="button">Go to website <i class="bi bi-caret-right-fill"></i></a>
                         </div>
                     </div>
                 </article>
@@ -82,10 +80,13 @@
                     <div class="grid">
                         <img src="src/img/flettube.png" alt="">
                         <div class="container">
-                            <h4>Description:</h4>
-                            <p>An YouTube and YouTube Music downloader for Linux and Android.</p>
+                            <div class="cont">
+                                <h4>Description:</h4>
+                                <p>An YouTube and YouTube Music downloader for Linux and Android.</p>
+
+                            </div>
                             
-                            <a href="https://github.com/MayorTom4815/FletTube" role="button"><i class="bi bi-github"></i> Go to repocitory <i class="bi bi-caret-right-fill"></i></a>
+                            <a href="https://github.com/MayorTom4815/FletTube" role="button"><i class="bi bi-github"></i> Go to repository <i class="bi bi-caret-right-fill"></i></a>
                         </div>
                     </div>
                 </article>
@@ -98,16 +99,40 @@
 
                     <div class="grid">
                         <div class="container">
-                            <h4>Description:</h4>
-                            <p><b>¡Que mejor que en español!.</b></p>
-                            <p><b>Minecraft Better Than Adventure Mod en Español Latinoamericano.</b> Para todos aquellos que quieren jugar este magnifico mod sin la nesesidad de saber ingles. Ahora con soporte para la version <b>7.2_01</b>.</p>
-                            
-                            <a href="https://github.com/MayorTom4815/BTA.ES_LA" role="button"><i class="bi bi-github"></i> Go to repocitory <i class="bi bi-caret-right-fill"></i></a>
+                            <div class="cont">
+                                <h4>Description:</h4>
+                                <p><b>¡Que mejor que en español!.</b></p>
+                                <p><b>Minecraft Better Than Adventure Mod en Español Latinoamericano.</b> Para todos aquellos que quieren jugar este magnifico mod sin la nesesidad de saber ingles. Ahora con soporte para la version <b>7.2_01</b>.</p>
+                            </div>
+                            <a href="https://github.com/MayorTom4815/BTA.ES_LA" role="button"><i class="bi bi-github"></i> Go to repository <i class="bi bi-caret-right-fill"></i></a>
                         </div>
                     </div>
                 </article>
             </article>
+
+            <article id="Contact">
+                <header>
+                    <i class="bi bi-envelope-at-fill"></i> Contacts
+                </header>
+
+                <article>
+                    <header><strong><i class="bi bi-link"></i> Social Media Liks</strong></header>
+                    <div class="grid">
+                        <a href="https://github.com/MayorTom4815" role="button"><i class="bi bi-github"></i> GitHub</a>
+                        <a href="https://www.youtube.com/@mayortom4815" role="button"><i class="bi bi-youtube"></i> YouTube</a>
+                        <a href="https://soundcloud.com/mayortom048" role="button"><i class="bi bi-cloud-fill"></i> SoundCloud</a>
+                    </div>
+                </article>
+
+                <article>
+                    <header><strong><i class="bi bi-envelope-at-fill"></i> E-mail</strong></header>
+                    <fieldset role="group">
+                        <input type="email" value="domiisac2004@proton.me" readonly id="email">
+                        <button id="emailbutton" data-tooltip="Copy to clipboard" onclick="ToClipboard()"><i class="bi bi-clipboard2-fill"></i></button>
+                    </fieldset>
+                </article>
+            </article>
         </main>
-        <source src="src/js/main.js" type="">
+        <script src="src/js/main.js"></script>
     </body>
 </html>
