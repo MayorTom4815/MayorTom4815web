@@ -24,14 +24,14 @@ const title = document.querySelector("#title");
 const link_download = document.querySelector("#link_download");
 
 player.src = tags[currentaudio].src;
-link_download.download = tags[currentaudio].src;
+link_download.href = tags[currentaudio].src;
+link_download.download = `${tags[currentaudio].title}.wav`
 
 function timefomrmat(segundos) {
     const m = String(Math.floor((segundos % 3600) / 60)).padStart(2, "0");
     const s = String(Math.floor(segundos % 60)).padStart(2, "0");
     return `${m}:${s}`;
 }
-
 
 player.addEventListener("timeupdate", (event) => {
     duration.textContent = `${timefomrmat(player.currentTime)} - ${timefomrmat(player.duration)}`;
@@ -41,9 +41,11 @@ player.addEventListener("timeupdate", (event) => {
 player.addEventListener("durationchange", (event) => {
     var audio = tags[currentaudio];
 
-    link_download.download = tags[currentaudio].src;
+    link_download.download = `${audio.title}.wav`
+    link_download.href = audio.src;
+
     duration.textContent = `${timefomrmat(player.currentTime)} - ${timefomrmat(player.duration)}`;
-    title.innerHTML = `<h3>${tags[currentaudio].title}</h3>`;
+    title.innerHTML = `<h3>${audio.title}</h3>`;
     seeker.max = player.duration;
 })
 
