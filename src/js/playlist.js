@@ -12,6 +12,11 @@ const tags = [
         "title": "INTO A CIBER'S CITY",
         "src": "./src/audios/IntoACibersWorld.wav"
     },
+
+    {
+        "title": "A Black Knife.",
+        "src": "./src/audios/BlackKnife.wav"
+    },
 ]
 
 
