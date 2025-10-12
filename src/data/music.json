@@ -1,0 +1,48 @@
+[
+    {
+        "album_title": "My Legend of Deltarune",
+        "album_cover": "img/hearts.png",
+        "playlist": [
+            {
+                "track_title": "A Full Field of Hopes and Dreams",
+                "src": "audios/AFullFieldOfHopesAndDreams.wav",
+                "youtube_url":"https://youtu.be/ExoocZ-Nujs"
+            },
+            {
+                "track_title": "THE WORLD STILL REVOLVING AND NEVER STOP!!",
+                "src": "audios/TheWorldStillRevolvingAndNeverStop.wav",
+                "youtube_url":"https://youtu.be/U3_RYNYt_HU"
+            },
+            {
+                "track_title": "INTO A CYBER'S CITY",
+                "src": "audios/IntoACibersWorld.wav",
+                "youtube_url":"https://www.youtube.com/watch?v=A7U9xQcSN9U"
+            },
+            {
+                "track_title": "DO YOU WANNA BE A [[BIG SHOT]]?!!",
+                "src":"",
+                "youtube_url":"https://www.youtube.com/watch?v=v0APSzn5ekU"
+            },
+            {
+                "track_title" : "In live and full color from a TV WORLD!!",
+                "src":"",
+                "youtube_url":"https://youtu.be/nYhgLIQTBEM"
+            },
+            {
+                "track_title": "A Black Knife.",
+                "src": "audios/BlackKnife.wav",
+                "youtube_url":"https://www.youtube.com/watch?v=Wh1QHJo9B-o"
+            },
+            {
+                "track_title":"Dark Santuary.",
+                "src":"",
+                "youtube_url":""
+            },
+            {
+                "track_title":"The Hammer of justice.",
+                "src":"",
+                "youtube_url":""
+            }
+        ]
+    }
+]

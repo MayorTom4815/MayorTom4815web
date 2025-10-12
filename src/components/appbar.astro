@@ -1,0 +1,70 @@
+---
+import { Image } from "astro:assets";
+import Logo from "../assets/logo.gif";
+---
+
+<nav>
+    <ul>
+        <li><Image src={Logo} alt="" /></li>
+        <li>
+            <strong>MayorTom4815</strong><br /><p>A Programmer and artist</p>
+        </li>
+    </ul>
+    <ul>
+        <li>
+            <details class="dropdown">
+                <summary role="button">Menu</summary>
+
+                <ul dir="rtl">
+                    <li>
+                        <a href="/MayorTom4815web/"
+                            >About Me <i class="bi bi-file-person-fill"></i></a
+                        >
+                    </li>
+
+                    <li>
+                        <a href="/MayorTom4815web/projects"
+                            >My projects <i class="bi bi-suitcase-lg-fill"
+                            ></i></a
+                        >
+                    </li>
+
+                    <li>
+                        <a href="/MayorTom4815web/music"
+                            >My Music <i class="bi bi-vinyl-fill"></i></a
+                        >
+                    </li>
+                </ul>
+            </details>
+        </li>
+    </ul>
+</nav>
+
+<style>
+    nav {
+        margin: 0px 5vw;
+
+        & ul {
+            justify-content: center;
+        }
+    }
+
+    img {
+        border-radius: 5px;
+        width: 8vh;
+    }
+
+    details {
+        transition: scale 1s;
+        & summary::after {
+            transition: rotate 0.5s;
+        }
+    }
+
+    details:open {
+        scale: 2;
+        & summary::after {
+            rotate: 180deg;
+        }
+    }
+</style>

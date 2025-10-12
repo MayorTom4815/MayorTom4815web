@@ -1,0 +1,29 @@
+---
+import MainLayout from "../layouts/mainLayout.astro";
+import music from "../data/music.json";
+import Album from "../components/album.astro";
+---
+
+<MainLayout>
+    <article>
+        <header>
+            <strong><i class="bi bi-vinyl-fill"></i> My Music </strong>
+        </header>
+
+        {
+            music.map((item) => (
+                <Album
+                    title={item.album_title}
+                    cover={item.album_cover}
+                    playlist={item.playlist}
+                />
+            ))
+        }
+    </article>
+</MainLayout>
+
+<style>
+    .list-tracks {
+        list-style: upper-roman;
+    }
+</style>

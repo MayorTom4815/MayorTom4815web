@@ -1,0 +1,22 @@
+[
+    {
+        "name":"GitHub",
+        "icon":"github",
+        "link":"https://github.com/MayorTom4815"
+    },
+    {
+        "name":"YouTube",
+        "icon":"youtube",
+        "link":"https://www.youtube.com/@mayortom4815"
+    },
+    {
+        "name":"Itch.io",
+        "icon":"joystick",
+        "link":"https://mayortom4815.itch.io/"
+    },
+    {
+        "name":"BlueSky",
+        "icon":"bluesky",
+        "link":"https://bsky.app/profile/mayortom4815.bsky.social"
+    }
+]

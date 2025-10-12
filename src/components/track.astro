@@ -1,0 +1,80 @@
+---
+const { title, src, url } = Astro.props;
+---
+
+<li>
+    {url == "" && src == "" ? <h5>{title} (Coming Soon)</h5> : <h5>{title}</h5>}
+
+    <div class="controls">
+        {
+            src != "" ? (
+                <a
+                    role="button"
+                    href={src}
+                    download=""
+                    data-tooltip="Direct download"
+                >
+                    <i class="bi bi-cloud-arrow-down-fill" />
+                </a>
+
+                <a
+                    role="button"
+                    href={src}
+                    data-tooltip="Listen track in browser"
+                >
+                    <i class="bi bi-file-earmark-code-fill"></i>
+                </a>
+
+            ) : (
+                <button disabled>
+                    <i class="bi bi-cloud-arrow-down-fill" />
+                </button>
+
+                <button disabled>
+                    <i class="bi bi-file-earmark-code-fill"></i>
+                </button>
+            )
+        }
+
+        {
+            url != "" ? (
+                <a
+                    role="button"
+                    href={url}
+                    data-tooltip="Listen track in YouTube"
+                >
+                    <i class="bi bi-youtube" />
+                </a>
+            ) : (
+                <button disabled>
+                    <i class="bi bi-youtube" />
+                </button>
+            )
+        }
+    </div>
+</li>
+
+<style>
+    li{
+        display: flex;
+        flex-flow: row nowrap;
+        
+        justify-content: space-between;
+        align-items: center;
+
+        & .controls{
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: center;
+
+            & button{
+                margin: 0px 2vw;
+            }
+
+            & a{
+                margin: 0px 2vw;
+            }
+            
+        }
+    }
+</style>

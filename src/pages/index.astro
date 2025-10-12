@@ -1,0 +1,77 @@
+---
+import MainLayout from "../layouts/mainLayout.astro";
+import SmLink from "../components/sm-link.astro";
+import links from "../data/sm.json";
+---
+
+<MainLayout>
+	<article>
+		<header>
+			<strong><i class="bi bi-file-person-fill"></i> About Me</strong>
+		</header>
+
+		<p><b>Hello world!</b>. I'm mexican programmer and artist.</p>
+
+		<p>
+			I was a normal kiddo like you, but once day an radioactive HP
+			computer with Windows 98 bitted me, and then I'm wirdo. My major
+			canonic event was look my Nintendo DS die with own eyes after
+			"unlock it". Before to die, it said "With great code, comes great
+			responsibility" and dies for a "break".
+		</p>
+
+		<blockquote>
+			<p>
+				The dream from yesterday is the motivacion of today and reallity
+				for tomorrow.
+			</p>
+			<footer>
+				<cite>- Me</cite>
+			</footer>
+		</blockquote>
+	</article>
+
+	<article>
+		<header>
+			<strong><i class="bi bi-envelope-at-fill"></i> Contacts</strong>
+		</header>
+
+		<article>
+			<header>
+				<strong><i class="bi bi-link"></i> Social Media Links</strong>
+			</header>
+
+			<div class="grid">
+				{
+					links.map((item) => (
+						<SmLink
+							name={item.name}
+							link={item.link}
+							icon={item.icon}
+						/>
+					))
+				}
+			</div>
+		</article>
+
+		<article>
+			<header>
+				<strong><i class="bi bi-link"></i> E-mail</strong>
+			</header>
+
+			<fieldset role="group">
+				<input type="email" value="domiisac2004@proton.me" id="email" readonly>
+				<button id="emailbutton" data-tooltip="Copy to clipboard"><i class="bi bi-clipboard2-fill"></i></button>
+			</fieldset>
+		</article>
+
+		<script>
+			const emailbutton = document.querySelector("#emailbutton");
+			const email = document.querySelector("#email");
+
+			emailbutton?.addEventListener("click", () => {
+				navigator.clipboard.writeText(email.value);
+			})
+		</script>
+	</article>
+</MainLayout>

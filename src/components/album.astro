@@ -1,0 +1,44 @@
+---
+import Track from "./track.astro";
+const { title, cover, playlist } = Astro.props;
+---
+
+<article>
+    <div class="cover">
+        <img src={cover} alt="" />
+        <h3>{title}</h3>
+    </div>
+
+    <ol>
+        {
+            playlist.map((item) => (
+                <Track
+                    title={item.track_title}
+                    src={item.src}
+                    url={item.youtube_url}
+                />
+            ))
+        }
+    </ol>
+</article>
+
+<style>
+    .cover {
+        flex-flow: column nowrap;
+        display: flex;
+
+        align-items: center;
+        margin: 5vh 0vw;
+
+        & img {
+            aspect-ratio: 226/263;
+            width: 25vh;
+
+            padding: 2vh 0vw;
+        }
+    }
+
+    ol {
+        list-style: upper-roman;
+    }
+</style>

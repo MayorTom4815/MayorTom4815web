@@ -1,0 +1,25 @@
+---
+import Project from "../components/project.astro";
+import projects from "../data/projects.json";
+import MainLayout from "../layouts/mainLayout.astro";
+---
+
+<MainLayout>
+    <article>
+        <header>
+            <strong><i class="bi bi-suitcase-lg-fill"></i> My projects</strong>
+        </header>
+
+        {
+            projects.map((item) => (
+                <Project
+                    title={item.title}
+                    status={item.status}
+                    image_src={item.image}
+                    description={item.description}
+                    url={item.url}
+                />
+            ))
+        }
+    </article>
+</MainLayout>

@@ -1,0 +1,28 @@
+---
+import Appbar from "../components/appbar.astro";
+---
+
+<!doctype html>
+<html lang="en-US">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.jade.min.css"
+		/>
+		<meta name="generator" content={Astro.generator} />
+		<title>MayorTom4815</title>
+	</head>
+	<body>
+		<Appbar />
+		<main class="container-fluid">
+			<slot></slot>
+		</main>
+	</body>
+</html>
