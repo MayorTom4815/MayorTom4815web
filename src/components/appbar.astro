@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import Logo from "../assets/logo.gif";
+const base = import.meta.env.BASE_URL
 ---
 
 <nav>
@@ -17,20 +18,20 @@ import Logo from "../assets/logo.gif";
 
                 <ul dir="rtl">
                     <li>
-                        <a href="/"
+                        <a href={`${base}/`}
                             >About Me <i class="bi bi-file-person-fill"></i></a
                         >
                     </li>
 
                     <li>
-                        <a href="/projects"
+                        <a href={`${base}/projects`}
                             >My projects <i class="bi bi-suitcase-lg-fill"
                             ></i></a
                         >
                     </li>
 
                     <li>
-                        <a href="/music"
+                        <a href={`${base}/music`}
                             >My Music <i class="bi bi-vinyl-fill"></i></a
                         >
                     </li>
