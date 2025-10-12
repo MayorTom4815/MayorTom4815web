@@ -1,21 +1,21 @@
 [
     {
         "album_title": "My Legend of Deltarune",
-        "album_cover": "/MayorTom4815/img/hearts.png",
+        "album_cover": "/img/hearts.png",
         "playlist": [
             {
                 "track_title": "A Full Field of Hopes and Dreams",
-                "src": "/MayorTom4815/audios/AFullFieldOfHopesAndDreams.wav",
+                "src": "/audios/AFullFieldOfHopesAndDreams.wav",
                 "youtube_url":"https://youtu.be/ExoocZ-Nujs"
             },
             {
                 "track_title": "THE WORLD STILL REVOLVING AND NEVER STOP!!",
-                "src": "/MayorTom4815/audios/TheWorldStillRevolvingAndNeverStop.wav",
+                "src": "/audios/TheWorldStillRevolvingAndNeverStop.wav",
                 "youtube_url":"https://youtu.be/U3_RYNYt_HU"
             },
             {
                 "track_title": "INTO A CYBER'S CITY",
-                "src": "/MayorTom4815/audios/IntoACibersWorld.wav",
+                "src": "/audios/IntoACibersWorld.wav",
                 "youtube_url":"https://www.youtube.com/watch?v=A7U9xQcSN9U"
             },
             {
@@ -30,7 +30,7 @@
             },
             {
                 "track_title": "A Black Knife.",
-                "src": "/MayorTom4815/audios/BlackKnife.wav",
+                "src": "/audios/BlackKnife.wav",
                 "youtube_url":"https://www.youtube.com/watch?v=Wh1QHJo9B-o"
             },
             {
