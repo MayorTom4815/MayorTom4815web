@@ -1,11 +1,12 @@
 ---
 import Track from "./track.astro";
 const { title, cover, playlist } = Astro.props;
+const base = import.meta.env.BASE_URL
 ---
 
 <article>
     <div class="cover">
-        <img src={cover} alt="" />
+        <img src={`${base}${cover}`} alt="" />
         <h3>{title}</h3>
     </div>
 
