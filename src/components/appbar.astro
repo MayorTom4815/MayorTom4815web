@@ -61,18 +61,8 @@ const base = import.meta.env.BASE_URL;
         width: 8vh;
     }
 
-    details:open {
-        & summary {
-            rotate: 90deg;
-        }
-    }
-
-    summary {
-        transition: rotate 0.5s;
-
-        &::after {
-            display: none;
-        }
+    details summary::after {
+        display: none;
     }
 
     @keyframes ShowOut {
