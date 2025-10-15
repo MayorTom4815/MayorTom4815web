@@ -46,7 +46,7 @@ import MainLayout from "../layouts/mainLayout.astro";
 
 <style>
     a {
-        margin: 10px 0px;
+        margin: 2vh 0px;
         width: 100%;
     }
 
@@ -61,8 +61,12 @@ import MainLayout from "../layouts/mainLayout.astro";
         scale: 0;
 
         animation: appear ease-in-out both;
-        animation-timeline: view();
         animation-range: entry 20% cover 30%;
+        animation-timeline: view();
+
+        & img{
+            border-radius: 20px;
+        }
     }
 
     @keyframes appear {

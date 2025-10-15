@@ -1,0 +1,13 @@
+* {
+    animation: 0.5s showIn linear;
+}
+
+@keyframes showIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

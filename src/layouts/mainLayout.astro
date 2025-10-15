@@ -1,6 +1,8 @@
 ---
 import Appbar from "../components/appbar.astro";
 import ButtonTop from "../components/buttonTop.astro";
+
+import "../styles/globals.css";
 ---
 
 <!doctype html>
@@ -8,7 +10,7 @@ import ButtonTop from "../components/buttonTop.astro";
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="favicon.svg" />
 		<link
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
@@ -22,9 +24,15 @@ import ButtonTop from "../components/buttonTop.astro";
 	</head>
 	<body>
 		<Appbar />
-		<main class="container-fluid">
+		<main class="container-fluid" id="main-container">
 			<slot />
 		</main>
 		<ButtonTop />
 	</body>
 </html>
+
+<style>
+	#main-container {
+		scroll-behavior: smooth;
+	}
+</style>
