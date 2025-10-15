@@ -1,35 +1,28 @@
 ---
 import MainLayout from "../layouts/mainLayout.astro";
-import SmLink from "../components/sm-link.astro";
 import links from "../data/sm.json";
 ---
 
 <MainLayout>
-	<article>
-		<header>
-			<strong><i class="bi bi-file-person-fill"></i> About Me</strong>
-		</header>
-
-		<p><b>Hello world!</b>. I'm mexican programmer and artist.</p>
-
-		<p>
-			I was a normal kiddo like you, but once day an radioactive HP
-			computer with Windows 98 bitted me, and then I'm wirdo. My major
-			canonic event was look my Nintendo DS die with own eyes after
-			"unlock it". Before to die, it said "With great code, comes great
-			responsibility" and dies for a "break".
-		</p>
-
-		<blockquote>
+	<header class="banner">
+		<div>
+			<h1>Hello world!</h1>
 			<p>
-				The dream from yesterday is the motivacion of today and reallity
-				for tomorrow.
+				I was a normal kiddo like you, but once day an radioactive HP
+				computer with Windows 98 bitted me, and then I'm wirdo... My
+				major canonic event was look my Nintendo DS die with own eyes
+				after "unlock it", aftre to die they said:
 			</p>
-			<footer>
-				<cite>- Me</cite>
-			</footer>
-		</blockquote>
-	</article>
+
+			<blockquote>
+				<p>"With a great code, comes a great responsibility".</p>
+
+				<footer>
+					<cite>My Nintedo DS (2009 - 2009)</cite>
+				</footer>
+			</blockquote>
+		</div>
+	</header>
 
 	<article>
 		<header>
@@ -44,11 +37,9 @@ import links from "../data/sm.json";
 			<div class="grid">
 				{
 					links.map((item) => (
-						<SmLink
-							name={item.name}
-							link={item.link}
-							icon={item.icon}
-						/>
+						<a href={item.link} role="button">
+							<i class={`bi bi-${item.icon}`} /> {item.name}
+						</a>
 					))
 				}
 			</div>
@@ -60,8 +51,15 @@ import links from "../data/sm.json";
 			</header>
 
 			<fieldset role="group">
-				<input type="email" value="domiisac2004@proton.me" id="email" readonly>
-				<button id="emailbutton" data-tooltip="Copy to clipboard"><i class="bi bi-clipboard2-fill"></i></button>
+				<input
+					type="email"
+					value="domiisac2004@proton.me"
+					id="email"
+					readonly
+				/>
+				<button id="emailbutton" data-tooltip="Copy to clipboard"
+					><i class="bi bi-clipboard2-fill"></i></button
+				>
 			</fieldset>
 		</article>
 
@@ -71,7 +69,23 @@ import links from "../data/sm.json";
 
 			emailbutton?.addEventListener("click", () => {
 				navigator.clipboard.writeText(email.value);
-			})
+			});
 		</script>
 	</article>
 </MainLayout>
+
+<style>
+	.banner {
+		background: fixed url("img/banner.jpg") no-repeat 100% / cover;
+		margin-bottom: 10vh;
+		border-radius: 10px;
+		padding: 15vh 5vw;
+
+		& div {
+			box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.5);
+			backdrop-filter: blur(100px) brightness(50%);
+			border-radius: 20px;
+			padding: 5vh 5vw;
+		}
+	}
+</style>

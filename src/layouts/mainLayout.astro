@@ -1,5 +1,6 @@
 ---
 import Appbar from "../components/appbar.astro";
+import ButtonTop from "../components/buttonTop.astro";
 ---
 
 <!doctype html>
@@ -22,7 +23,8 @@ import Appbar from "../components/appbar.astro";
 	<body>
 		<Appbar />
 		<main class="container-fluid">
-			<slot></slot>
+			<slot />
 		</main>
+		<ButtonTop />
 	</body>
 </html>

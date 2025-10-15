@@ -1,5 +1,4 @@
 ---
-import Project from "../components/project.astro";
 import projects from "../data/projects.json";
 import MainLayout from "../layouts/mainLayout.astro";
 ---
@@ -12,14 +11,64 @@ import MainLayout from "../layouts/mainLayout.astro";
 
         {
             projects.map((item) => (
-                <Project
-                    title={item.title}
-                    status={item.status}
-                    image_src={item.image}
-                    description={item.description}
-                    url={item.url}
-                />
+                <article class="project">
+                    <header>
+                        <strong>
+                            <>
+                                <h4>{item.title}</h4>
+                                <p>
+                                    <b>Status:</b> <u>{item.status}</u>
+                                </p>
+                            </>
+                        </strong>
+                    </header>
+
+                    <div class="grid">
+                        {item.image != "" && <img src={item.image} alt="" />}
+
+                        <div class="container">
+                            <h4>Description:</h4>
+                            <div>
+                                <p class="des">{item.description}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href={item.url} role="button" class="secondary">
+                        <i class="bi bi-box-arrow-in-down-right" /> Go to the
+                        project
+                    </a>
+                </article>
             ))
         }
     </article>
 </MainLayout>
+
+<style>
+    a {
+        margin: 10px 0px;
+        width: 100%;
+    }
+
+    .container {
+        justify-content: center;
+        flex-flow: column nowrap;
+        display: flex;
+    }
+
+    .project {
+        opacity: 0;
+        scale: 0;
+
+        animation: appear ease-in-out both;
+        animation-timeline: view();
+        animation-range: entry 20% cover 30%;
+    }
+
+    @keyframes appear {
+        to {
+            opacity: 1;
+            scale: 1;
+        }
+    }
+</style>
