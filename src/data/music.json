@@ -1,46 +1,46 @@
 [
     {
         "album_title": "My Legend of Deltarune",
-        "album_cover": "img/covers/hearts.png",
+        "album_cover": "/img/covers/hearts.png",
         "playlist": [
             {
                 "track_title": "A Full Field of Hopes and Dreams",
-                "src": "audios/AFullFieldOfHopesAndDreams.wav",
+                "src": "/audios/AFullFieldOfHopesAndDreams.wav",
                 "youtube_url":"https://youtu.be/ExoocZ-Nujs"
             },
             {
                 "track_title": "THE WORLD STILL REVOLVING AND NEVER STOP!!",
-                "src": "audios/TheWorldStillRevolvingAndNeverStop.wav",
+                "src": "/audios/TheWorldStillRevolvingAndNeverStop.wav",
                 "youtube_url":"https://youtu.be/U3_RYNYt_HU"
             },
             {
                 "track_title": "INTO A CYBER'S CITY",
-                "src": "audios/IntoACibersWorld.wav",
+                "src": "/audios/IntoACibersWorld.wav",
                 "youtube_url":"https://www.youtube.com/watch?v=A7U9xQcSN9U"
             },
             {
                 "track_title": "DO YOU WANNA BE A [[BIG SHOT]]?!!",
-                "src":"audios/DoYouWannaBeABIGSHOT.wav",
+                "src":"/audios/DoYouWannaBeABIGSHOT.wav",
                 "youtube_url":"https://www.youtube.com/watch?v=v0APSzn5ekU"
             },
             {
                 "track_title" : "In live and full color from a TV WORLD!!",
-                "src":"audios/InLiveAndFullColorFromATVWORLD.wav",
+                "src":"/audios/InLiveAndFullColorFromATVWORLD.wav",
                 "youtube_url":"https://youtu.be/nYhgLIQTBEM"
             },
             {
                 "track_title": "A Black Knife",
-                "src": "audios/BlackKnife.wav",
+                "src": "/audios/BlackKnife.wav",
                 "youtube_url":"https://www.youtube.com/watch?v=Wh1QHJo9B-o"
             },
             {
                 "track_title":"The Dark Sanctuary",
-                "src":"audios/TheDarkSanctuary.wav",
+                "src":"/audios/TheDarkSanctuary.wav",
                 "youtube_url":"https://youtu.be/F6VpHzrdwkc"
             },
             {
                 "track_title":"The legend of 'Hammer of Justice'",
-                "src":"audios/TheLegendOfHammerOfJustice.wav",
+                "src":"/audios/TheLegendOfHammerOfJustice.wav",
                 "youtube_url":"https://youtu.be/8qLIbpLgCoA"
             }
         ]
