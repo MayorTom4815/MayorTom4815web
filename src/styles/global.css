@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: 'Tomorrow';
+    src: url('fonts/Tomorrow.ttf');
+}
+
+@font-face {
+    font-family: 'Orbitron';
+    src: url('fonts/Orbitron.ttf');
+}
+
+* {
+    font-family: "Tomorrow", system-ui;
+
+    --neon-shadow-teal-text: 0 0 10px var(--color-teal-300);
+    --neon-shadow-teal:
+        0 0 2px var(--color-teal-300),
+        0 0 4px var(--color-teal-300),
+        0 0 6px var(--color-teal-300),
+        0 0 8px var(--color-teal-300);
+
+    --neon-shadow-cyan-text: 0 0 10px var(--color-cyan-300);
+    --neon-shadow-cyan:
+        0 0 2px var(--color-cyan-300),
+        0 0 4px var(--color-cyan-300),
+        0 0 6px var(--color-cyan-300),
+        0 0 8px var(--color-cyan-300);
+
+    --neon-shadow-cyan-inset:
+        0 2px var(--color-cyan-300) inset,
+        0 0 6px var(--color-cyan-300) inset,
+        0 0 8px var(--color-cyan-300) inset,
+        0 0 10px var(--color-cyan-300) inset;
+
+    --neon-shadow-white-text: 0 0 10px var(--color-white);
+    --neon-shadow-white:
+        0 0 2px var(--color-white),
+        0 0 4px var(--color-white),
+        0 0 6px var(--color-white),
+        0 0 8px var(--color-white);
+
+    --neon-shadow-red:
+        0 0 2px var(--color-red-600),
+        0 0 4px var(--color-red-600),
+        0 0 6px var(--color-red-600),
+        0 0 8px var(--color-red-600);
+}
+
+.title {
+    font-family: "Orbitron", system-ui;
+}
+
+.neon-red {
+    transition: border 0.8s, box-shadow 0.8s, color 0.5s;
+
+    border: 2px solid var(--color-red-600);
+    box-shadow: var(--neon-shadow-red);
+    color: var(--color-red-600);
+
+    &:hover {
+        text-shadow: var(--neon-shadow-white-text);
+        box-shadow: var(--neon-shadow-white);
+        border: 2px solid var(--color-white);
+        color: var(--color-white);
+    }
+}
+
+.neon-green {
+    border: 2px solid var(--color-teal-300);
+    box-shadow: var(--neon-shadow-teal);
+    color: var(--color-teal-100);
+
+    & .title {
+        text-shadow: var(--neon-shadow-teal-text);
+        color: var(--color-teal-200);
+    }
+}
+
+.neon-blue {
+    box-shadow: var(--neon-shadow-cyan);
+    border: 2px solid var(--color-cyan-300);
+    color: var(--color-cyan-100);
+
+    & .title {
+        text-shadow: var(--neon-shadow-cyan-text);
+        color: var(--color-cyan-200);
+
+    }
+}
+
+.neon-white {
+    text-shadow: var(--neon-shadow-white-text);
+    box-shadow: var(--neon-shadow-white);
+    border: 2px solid var(--color-white);
+    color: var(--color-white);
+
+    & .title {
+        text-shadow: var(--neon-shadow-white-text);
+        color: var(--color-white);
+    }
+}
+
+.neon-button {
+    transition: box-shadow 0.8s, border 0.8s, color 0.5s, text-shadow 0.5s;
+    font-family: "Orbitron", system-ui;
+
+    border: 2px solid var(--color-teal-300);
+    box-shadow: var(--neon-shadow-teal);
+    color: var(--color-teal-100);
+
+
+    &:hover {
+        box-shadow: var(--neon-shadow-cyan-inset);
+        text-shadow: var(--neon-shadow-cyan-text);
+        border: 2px solid var(--color-cyan-300);
+        color: var(--color-cyan-100);
+
+    }
+}

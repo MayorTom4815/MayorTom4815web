@@ -1,0 +1,52 @@
+---
+const { title, status, image, description, url } = Astro.props;
+---
+
+<article class="p-4 my-6 rounded-sm neon-blue backdrop-blur-lg bg-black/20">
+    <header class="p-4 mb-2 mx-2 rounded-sm neon-white">
+        <h1 class="font-bold text-2xl md:text-4xl title">{title}</h1>
+        <p><b class="title">Status:</b> <u>{status}</u></p>
+    </header>
+
+    <div
+        class=`grid ${image == "" ? "grid-cols-1" : "md:grid-cols-2"} gap-2 my-2 p-4 rounded-sm `
+    >
+        <img
+            src={image}
+            alt=""
+            class="rounded-lg aspect-auto-16/9 self-center"
+        />
+
+        <div class="flex flex-col flex-nowrap justify-evenly">
+            <div class="mb-6">
+                <h1 class="font-bold text-2xl my-2 rounded-sm md:text-3xl title">
+                    Description:
+                    <hr />
+                </h1>
+                <p class="text-xl text-justify md:text-2xl">{description}</p>
+            </div>
+
+            <a href={url} class="text-center rounded-sm text-lg md:text-2xl p-5 neon-button"
+                ><i class="bi bi-box-arrow-in-up-right"></i> Go to the project</a
+            >
+        </div>
+    </div>
+</article>
+
+<style>
+    article {
+        translate: -200px 0px;
+        opacity: 0;
+
+        animation: showOn linear both;
+        animation-timeline: view();
+        animation-range: entry 30% cover 20%;
+    }
+
+    @keyframes showOn {
+        to {
+            translate: 0px 0px;
+            opacity: 1;
+        }
+    }
+</style>

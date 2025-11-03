@@ -1,7 +1,7 @@
 [
     {
         "album_title": "My Legend of Deltarune",
-        "album_cover": "img/hearts.png",
+        "album_cover": "img/covers/hearts.png",
         "playlist": [
             {
                 "track_title": "A Full Field of Hopes and Dreams",
@@ -20,28 +20,28 @@
             },
             {
                 "track_title": "DO YOU WANNA BE A [[BIG SHOT]]?!!",
-                "src":"",
+                "src":"audios/DoYouWannaBeABIGSHOT.wav",
                 "youtube_url":"https://www.youtube.com/watch?v=v0APSzn5ekU"
             },
             {
                 "track_title" : "In live and full color from a TV WORLD!!",
-                "src":"",
+                "src":"audios/InLiveAndFullColorFromATVWORLD.wav",
                 "youtube_url":"https://youtu.be/nYhgLIQTBEM"
             },
             {
-                "track_title": "A Black Knife.",
+                "track_title": "A Black Knife",
                 "src": "audios/BlackKnife.wav",
                 "youtube_url":"https://www.youtube.com/watch?v=Wh1QHJo9B-o"
             },
             {
-                "track_title":"Dark Santuary.",
-                "src":"",
-                "youtube_url":""
+                "track_title":"The Dark Sanctuary",
+                "src":"audios/TheDarkSanctuary.wav",
+                "youtube_url":"https://youtu.be/F6VpHzrdwkc"
             },
             {
-                "track_title":"The Hammer of justice.",
-                "src":"",
-                "youtube_url":""
+                "track_title":"The legend of 'Hammer of Justice'",
+                "src":"audios/TheLegendOfHammerOfJustice.wav",
+                "youtube_url":"https://youtu.be/8qLIbpLgCoA"
             }
         ]
     }

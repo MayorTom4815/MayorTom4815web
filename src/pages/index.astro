@@ -1,91 +1,41 @@
 ---
 import MainLayout from "../layouts/mainLayout.astro";
-import links from "../data/sm.json";
+import Link from "../components/link.astro";
+
+import sm from "../data/sm.json";
 ---
 
 <MainLayout>
-	<header class="banner">
-		<div>
-			<h1>Hello, world!</h1>
-			<p>
+	<header
+		class="my-2 px-8 py-50 rounded-sm bg-[url(img/banner.jpg)] bg-center bg-no-repeat bg-cover bg-fixed"
+	>
+		<div
+			class="backdrop-blur-xl backdrop-brightness-25 p-10 rounded-sm neon-blue"
+		>
+			<h1 class="text-2xl font-bold md:text-4xl title">Hello, world!</h1>
+
+			<p class="text-xl text-justify md:text-2xl">
 				I was a normal kiddo like you, but once day an radioactive HP
 				computer with Windows 98 bitted me, and then I'm wirdo... My
 				major canonic event was look my Nintendo DS die with own eyes
-				after "unlock it", aftre to die they said:
+				after "unlock it".
 			</p>
-
-			<blockquote>
-				<p>"With a great code, comes a great responsibility".</p>
-
-				<footer>
-					<cite>My Nintedo DS (2009 - 2009)</cite>
-				</footer>
-			</blockquote>
 		</div>
 	</header>
 
-	<article>
-		<header>
-			<strong><i class="bi bi-envelope-at-fill"></i> Contacts</strong>
+	<article class="p-4 my-6 bg-black/20 rounded-sm neon-blue">
+		<header class="p-4 mb-4 rounded-sm">
+			<h1 class="text-2xl font-bold md:text-4xl title">
+				<i class="bi bi-link"></i> Links
+			</h1>
 		</header>
 
-		<article>
-			<header>
-				<strong><i class="bi bi-link"></i> Social Media Links</strong>
-			</header>
-
-			<div class="grid">
-				{
-					links.map((item) => (
-						<a href={item.link} role="button">
-							<i class={`bi bi-${item.icon}`} /> {item.name}
-						</a>
-					))
-				}
-			</div>
-		</article>
-
-		<article>
-			<header>
-				<strong><i class="bi bi-link"></i> E-mail</strong>
-			</header>
-
-			<fieldset role="group">
-				<input
-					type="email"
-					value="domiisac2004@proton.me"
-					id="email"
-					readonly
-				/>
-				<button id="emailbutton" data-tooltip="Copy to clipboard"
-					><i class="bi bi-clipboard2-fill"></i></button
-				>
-			</fieldset>
-		</article>
-
-		<script>
-			const emailbutton = document.querySelector("#emailbutton");
-			const email = document.querySelector("#email");
-
-			emailbutton?.addEventListener("click", () => {
-				navigator.clipboard.writeText(email.value);
-			});
-		</script>
+		<div class="grid auto-rows-max md:grid-cols-2 my-2 gep-2 md:gap-4">
+			{
+				sm.map((item) => (
+					<Link name={item.name} icon={item.icon} link={item.link} />
+				))
+			}
+		</div>
 	</article>
 </MainLayout>
-
-<style>
-	.banner {
-		background: fixed url("img/banner.svg") no-repeat 100% / cover;
-		margin-bottom: 10vh;
-		border-radius: 10px;
-		padding: 15vh 5vw;
-
-		& div {
-			box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.5);
-			backdrop-filter: blur(100px) brightness(50%);
-			border-radius: 20px;
-			padding: 5vh 5vw;
-		}
-	}
-</style>

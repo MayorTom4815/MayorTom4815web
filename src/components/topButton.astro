@@ -1,0 +1,25 @@
+---
+import "../styles/global.css";
+---
+
+<a
+    href="#top"
+    class="sticky bottom-5 left-5 rounded-sm p-4 text-lg bg-black/50 md:text-2xl neon-red"
+    ><i class="bi bi-caret-up-fill"></i></a
+>
+
+<style>
+    a {
+        opacity: 0;
+
+        animation: showOn linear both;
+        animation-timeline: scroll();
+        animation-range: 95% 100%;
+    }
+
+    @keyframes showOn {
+        to {
+            opacity: 1;
+        }
+    }
+</style>

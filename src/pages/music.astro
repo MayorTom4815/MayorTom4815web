@@ -1,29 +1,77 @@
 ---
 import MainLayout from "../layouts/mainLayout.astro";
-import music from "../data/music.json";
-import Album from "../components/album.astro";
+import data from "../data/music.json";
 ---
 
 <MainLayout>
-    <article>
-        <header>
-            <strong><i class="bi bi-vinyl-fill"></i> My Music </strong>
-        </header>
+    {
+        data.map((item) => (
+            <article class="p-4 my-6 rounded-sm bg-black/20 backdrop-blur-lg neon-blue">
+                <header class="flex p-4 mb-2  rounded-sm neon-white items-center">
+                    <img
+                        src={item.album_cover}
+                        alt=""
+                        class="w-15 md:w-20 aspect-square mr-2"
+                    />
+                    <h1 class="font-bold text-xl md:text-2xl title">
+                        {item.album_title}
+                    </h1>
+                </header>
 
-        {
-            music.map((item) => (
-                <Album
-                    title={item.album_title}
-                    cover={item.album_cover}
-                    playlist={item.playlist}
-                />
-            ))
-        }
-    </article>
+                <ul class="md:mx-20">
+                    {item.playlist.map((music) => (
+                        <li class="flex justify-between items-center py-4">
+                            <audio src={music.src} loop />
+
+                            <h1 class="text-xl mr-4 md:text-2xl title">
+                                {music.track_title}
+                            </h1>
+
+                            <div class="flex">
+                                <button class="py-4 px-5 text-2xl text-center cursor-pointer neon-button">
+                                    <i class="bi bi-play-fill" id="icon" />
+                                </button>
+
+                                <a
+                                    href={music.youtube_url}
+                                    class="py-4 px-5 text-2xl text-center neon-button"
+                                >
+                                    <i class="bi bi-youtube" />
+                                </a>
+
+                                <a
+                                    href={music.src}
+                                    class="py-4 px-5 text-2xl text-center neon-button"
+                                    download=""
+                                >
+                                    <i class="bi bi-download" />
+                                </a>
+                            </div>
+                        </li>
+                    ))}
+                </ul>
+            </article>
+        ))
+    }
 </MainLayout>
 
-<style>
-    .list-tracks {
-        list-style: upper-roman;
-    }
-</style>
+<script>
+    var articles = document.querySelectorAll("li");
+
+    articles.forEach((item, key, p) => {
+        var audio = item.querySelector("audio");
+        var icon = item.querySelector("#icon");
+        var btn = item.querySelector("button");
+
+        btn?.addEventListener("click", (e) => {
+            if (audio?.paused) {
+                icon?.setAttribute("class", "bi bi-pause-fill");
+                audio?.play();
+            } else {
+                icon?.setAttribute("class", "bi bi-play-fill");
+                audio?.pause();
+                
+            }
+        });
+    });
+</script>

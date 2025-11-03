@@ -1,0 +1,115 @@
+---
+import { Image } from "astro:assets";
+import Logo from "../assets/logo.gif";
+
+const base = import.meta.env.BASE_URL;
+---
+
+<nav
+    class="sticky top-2 my-2 p-4 flex
+    justify-between rounded-sm items-center
+    w-[95%] justify-self-center z-90 backdrop-blur-lg
+    bg-black/50 neon-green"
+>
+    <div class="flex items-center justify-start overflow-hidden" id="info">
+        <Image src={Logo} alt="" class="w-15 mr-2 rounded-sm hidden md:block" />
+
+        <div>
+            <h1 class="font-bold text-lg md:text-xl title">MayorTom4815</h1>
+            <p class="text-sm md:text-lg">Programmer and Artist</p>
+        </div>
+    </div>
+
+    <details class="dropdown">
+        <summary
+            class="text-center text-2xl rounded-sm py-1 px-2 animated md:text-4xl"
+            ><i class="bi bi-list"></i></summary
+        >
+
+        <ul
+            class="absolute w-50 top-20 right-0
+            flex flex-col justify-between 
+            self-justify-center p-4 rounded-sm bg-black/80 neon-white"
+        >
+            <li class="my-2 md:my-4">
+                <a
+                    href=`${base}`
+                    class="p-2 rounded-sm transition border-2
+                    border-transparent md:text-xl
+                    hover:shadow-(--neon-shadow-white) hover:border-white title"
+                >
+                    <i class="bi bi-person-vcard-fill"></i> About Me</a
+                >
+            </li>
+
+            <li class="my-2 md:my-4">
+                <a
+                    href=`${base}projects`
+                    class="p-2 rounded-sm transition border-2
+                    border-transparent md:text-xl
+                    hover:shadow-(--neon-shadow-white) hover:border-white title"
+                >
+                    <i class="bi bi-briefcase-fill"></i> Projects</a
+                >
+            </li>
+
+            <li class="my-2 md:my-4">
+                <a
+                    href=`${base}music`
+                    class="p-2 rounded-sm transition border-2
+                        border-transparent md:text-xl
+                        hover:shadow-(--neon-shadow-white) hover:border-white title"
+                >
+                    <i class="bi bi-cassette-fill"></i> Music</a
+                >
+            </li>
+        </ul>
+    </details>
+</nav>
+
+<style>
+    summary::marker {
+        content: none;
+    }
+
+    details.dropdown {
+        & summary.animated {
+            border: 2px solid transparent;
+            color: var(--color-teal-200);
+            list-style: none;
+
+            transition:
+                rotate 0.2s ease-in,
+                box-shadow 0.2s ease-in-out,
+                background-color 0.5s;
+
+            &:hover {
+                border: 2px solid var(--color-teal-300);
+                box-shadow: var(--neon-shadow-teal);
+            }
+        }
+
+        & ul {
+            transition:
+                opacity 0.5s,
+                translate 0.5s;
+
+            translate: 0px -10px;
+            opacity: 0;
+        }
+
+        &:open {
+            & ul {
+                translate: 0px 0px;
+                opacity: 1;
+            }
+
+            & summary.animated {
+                rotate: 90deg;
+                border: 2px solid var(--color-cyan-300);
+                box-shadow: var(--neon-shadow-cyan-inset);
+                color: var(--color-blue-200);
+            }
+        }
+    }
+</style>
