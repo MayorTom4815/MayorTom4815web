@@ -1,6 +1,8 @@
 ---
 import MainLayout from "../layouts/mainLayout.astro";
 import data from "../data/music.json";
+
+const base = import.meta.env.BASE_URL;
 ---
 
 <MainLayout>
@@ -9,7 +11,7 @@ import data from "../data/music.json";
             <article class="p-4 my-6 rounded-sm bg-black/20 backdrop-blur-lg neon-blue">
                 <header class="flex p-4 mb-2  rounded-sm neon-white items-center">
                     <img
-                        src={item.album_cover}
+                        src=`${base}${item.album_cover}`
                         alt=""
                         class="w-15 md:w-20 aspect-square mr-2"
                     />
@@ -21,7 +23,7 @@ import data from "../data/music.json";
                 <ul class="md:mx-20">
                     {item.playlist.map((music) => (
                         <li class="flex justify-between items-center py-4">
-                            <audio src={music.src} loop />
+                            <audio src=`${base}${music.src}` loop />
 
                             <h1 class="text-xl mr-4 md:text-2xl title">
                                 {music.track_title}
@@ -40,7 +42,7 @@ import data from "../data/music.json";
                                 </a>
 
                                 <a
-                                    href={music.src}
+                                    href=`${base}${music.src}`
                                     class="py-4 px-5 text-2xl text-center neon-button"
                                     download=""
                                 >
