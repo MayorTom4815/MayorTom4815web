@@ -2,12 +2,12 @@
 
 @font-face {
     font-family: 'Tomorrow';
-    src: url('fonts/Tomorrow.ttf');
+    src: url('/fonts/Tomorrow.ttf');
 }
 
 @font-face {
     font-family: 'Orbitron';
-    src: url('fonts/Orbitron.ttf');
+    src: url('/fonts/Orbitron.ttf');
 }
 
 * {

@@ -19,14 +19,18 @@ const { title, status, image, description, url } = Astro.props;
 
         <div class="flex flex-col flex-nowrap justify-evenly">
             <div class="mb-6">
-                <h1 class="font-bold text-2xl my-2 rounded-sm md:text-3xl title">
+                <h1
+                    class="font-bold text-2xl my-2 rounded-sm md:text-3xl title"
+                >
                     Description:
                     <hr />
                 </h1>
                 <p class="text-xl text-justify md:text-2xl">{description}</p>
             </div>
 
-            <a href={url} class="text-center rounded-sm text-lg md:text-2xl p-5 neon-button"
+            <a
+                href={url}
+                class="text-center rounded-sm text-lg md:text-2xl p-5 neon-button"
                 ><i class="bi bi-box-arrow-in-up-right"></i> Go to the project</a
             >
         </div>
@@ -35,15 +39,17 @@ const { title, status, image, description, url } = Astro.props;
 
 <style>
     article {
-        translate: -200px 0px;
-        opacity: 0;
-
+        animation-range: entry 30% cover 20%;
         animation: showOn linear both;
         animation-timeline: view();
-        animation-range: entry 30% cover 20%;
     }
 
     @keyframes showOn {
+        from {
+            translate: -200px 0px;
+            opacity: 0;
+        }
+
         to {
             translate: 0px 0px;
             opacity: 1;
